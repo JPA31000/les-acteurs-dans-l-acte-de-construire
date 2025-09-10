@@ -2,135 +2,200 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QCM - Les Partenaires et Intervenants du Secteur BTP</title>
+  <title>Quiz BTP – Acteurs Clés</title>
   <style>
-    body { font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; }
-    h1 { color: #2c3e50; }
-    .question { background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 15px; margin-bottom: 20px; }
-    .question h3 { margin-top: 0; }
-    .options label { display: block; margin: 8px 0; cursor: pointer; }
-    button { background-color: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-size: 16px; }
-    button:hover { background-color: #2980b9; }
-    .result { margin-top: 20px; padding: 15px; background-color: #ecf0f1; border-radius: 8px; }
-    .correction { margin-top: 10px; color: #2c3e50; }
-    input[type=radio]:disabled + span { color: #999; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      color: #333;
+      margin: 20px;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .quiz-container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      color: #34495e;
+    }
+    .question label {
+      display: block;
+      margin-bottom: 6px;
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .question input[type="radio"] {
+      margin-right: 10px;
+    }
+    .question label:hover {
+      background-color: #ecf0f1;
+      border-color: #34495e;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      background-color: #2980b9;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background-color: #1f6391;
+    }
+    .result-container {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+    .correction {
+      margin-top: 20px;
+      background: #ecf0f1;
+      padding: 15px;
+      border-radius: 4px;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
   </style>
 </head>
 <body>
-  <h1>QCM - Les Partenaires et Intervenants du Secteur BTP</h1>
-  <form id="quizForm">
-    <div class="question">
-      <h3>1. Quel est le rôle principal des entreprises du BTP ?</h3>
-      <div class="options">
-        <label><input type="radio" name="q1" value="0"> Elles financent les projets.</label>
-        <label><input type="radio" name="q1" value="1"> Elles réalisent concrètement les ouvrages.</label>
-        <label><input type="radio" name="q1" value="0"> Elles définissent les besoins des clients.</label>
-        <label><input type="radio" name="q1" value="0"> Elles assurent le suivi médical des ouvriers.</label>
+  <div class="quiz-container">
+    <h1>Quiz – Acteurs clés en BTP</h1>
+    <form id="quizForm">
+      <!-- Question 1 -->
+      <div class="question" data-correct="C">
+        <h3>1. Qui dessine les plans d’un bâtiment ?</h3>
+        <label><input type="radio" name="q1" value="A"> A) Le géomètre</label>
+        <label><input type="radio" name="q1" value="B"> B) Le plombier</label>
+        <label><input type="radio" name="q1" value="C"> C) L’architecte</label>
+        <label><input type="radio" name="q1" value="D"> D) Le MOA</label>
       </div>
-    </div>
-
-    <div class="question">
-      <h3>2. Qui sont les maîtres d'ouvrage ?</h3>
-      <div class="options">
-        <label><input type="radio" name="q2" value="0"> Les ouvriers du chantier.</label>
-        <label><input type="radio" name="q2" value="0"> Les enseignants en CFA.</label>
-        <label><input type="radio" name="q2" value="1"> Les clients qui commandent les projets.</label>
-        <label><input type="radio" name="q2" value="0"> Les inspecteurs de sécurité.</label>
+      <!-- Question 2 -->
+      <div class="question" data-correct="B">
+        <h3>2. Qui commande et finance un projet de construction ?</h3>
+        <label><input type="radio" name="q2" value="A"> A) Le maçon</label>
+        <label><input type="radio" name="q2" value="B"> B) Le Maître d’Ouvrage (MOA)</label>
+        <label><input type="radio" name="q2" value="C"> C) Le Maître d’Œuvre (MOE)</label>
+        <label><input type="radio" name="q2" value="D"> D) Le BET</label>
       </div>
-    </div>
-
-    <div class="question">
-      <h3>3. Quel est le rôle des maîtres d'œuvre ?</h3>
-      <div class="options">
-        <label><input type="radio" name="q3" value="0"> Financer les projets.</label>
-        <label><input type="radio" name="q3" value="1"> Concevoir les projets et contrôler les travaux.</label>
-        <label><input type="radio" name="q3" value="0"> Fournir des outils de sécurité.</label>
-        <label><input type="radio" name="q3" value="0"> Offrir des services bancaires spécialisés.</label>
+      <!-- Question 3 -->
+      <div class="question" data-correct="A">
+        <h3>3. Qui suit le chantier et vérifie que les plans sont respectés ?</h3>
+        <label><input type="radio" name="q3" value="A"> A) Le MOE</label>
+        <label><input type="radio" name="q3" value="B"> B) Le charpentier</label>
+        <label><input type="radio" name="q3" value="C"> C) Le plombier</label>
+        <label><input type="radio" name="q3" value="D"> D) Le géotechnicien</label>
       </div>
-    </div>
-
-    <div class="question">
-      <h3>4. Quelle est la mission de l'OPPBTP ?</h3>
-      <div class="options">
-        <label><input type="radio" name="q4" value="1"> Prévention des risques et formation à la sécurité.</label>
-        <label><input type="radio" name="q4" value="0"> Planification de chantiers.</label>
-        <label><input type="radio" name="q4" value="0"> Suivi des formations en alternance.</label>
-        <label><input type="radio" name="q4" value="0"> Définition des normes de construction.</label>
+      <!-- Question 4 -->
+      <div class="question" data-correct="C">
+        <h3>4. Quel est le rôle du BET ?</h3>
+        <label><input type="radio" name="q4" value="A"> A) Peindre les murs</label>
+        <label><input type="radio" name="q4" value="B"> B) Concevoir les plans</label>
+        <label><input type="radio" name="q4" value="C"> C) Calculer la structure, le chauffage, etc.</label>
+        <label><input type="radio" name="q4" value="D"> D) Poser les fenêtres</label>
       </div>
-    </div>
-
-    <div class="question">
-      <h3>5. Qui assure le suivi médical des travailleurs du BTP ?</h3>
-      <div class="options">
-        <label><input type="radio" name="q5" value="0"> La CARSAT.</label>
-        <label><input type="radio" name="q5" value="0"> La FNTP.</label>
-        <label><input type="radio" name="q5" value="1"> La médecine du travail.</label>
-        <label><input type="radio" name="q5" value="0"> L'OPPBTP.</label>
+      <!-- Question 5 -->
+      <div class="question" data-correct="C">
+        <h3>5. Qui réalise concrètement les travaux sur le chantier ?</h3>
+        <label><input type="radio" name="q5" value="A"> A) Le MOA</label>
+        <label><input type="radio" name="q5" value="B"> B) Le géomètre</label>
+        <label><input type="radio" name="q5" value="C"> C) Les entreprises du BTP</label>
+        <label><input type="radio" name="q5" value="D"> D) L’architecte</label>
       </div>
-    </div>
-
-    <div class="question">
-      <h3>6. Quel rôle joue la CARSAT ?</h3>
-      <div class="options">
-        <label><input type="radio" name="q6" value="1"> Prévention des accidents et sécurité.</label>
-        <label><input type="radio" name="q6" value="0"> Financement public des projets.</label>
-        <label><input type="radio" name="q6" value="0"> Formation en CFA.</label>
-        <label><input type="radio" name="q6" value="0"> Développement de logiciels BTP.</label>
+      <!-- Question 6 -->
+      <div class="question" data-correct="B">
+        <h3>6. Quel professionnel s’occupe des fondations et sols ?</h3>
+        <label><input type="radio" name="q6" value="A"> A) Le géomètre</label>
+        <label><input type="radio" name="q6" value="B"> B) Le géotechnicien</label>
+        <label><input type="radio" name="q6" value="C"> C) Le MOE</label>
+        <label><input type="radio" name="q6" value="D"> D) L’AMO</label>
       </div>
-    </div>
-
-    <div class="question">
-      <h3>7. Quel est l'objectif principal des fédérations professionnelles comme la FFB ?</h3>
-      <div class="options">
-        <label><input type="radio" name="q7" value="0"> Effectuer des inspections de chantier.</label>
-        <label><input type="radio" name="q7" value="1"> Défendre les intérêts du secteur et accompagner les entreprises.</label>
-        <label><input type="radio" name="q7" value="0"> Gérer les formations médicales.</label>
-        <label><input type="radio" name="q7" value="0"> Assurer la conformité réglementaire.</label>
+      <!-- Question 7 -->
+      <div class="question" data-correct="C">
+        <h3>7. Qui installe les canalisations et la robinetterie ?</h3>
+        <label><input type="radio" name="q7" value="A"> A) Le géotechnicien</label>
+        <label><input type="radio" name="q7" value="B"> B) Le charpentier</label>
+        <label><input type="radio" name="q7" value="C"> C) Le plombier</label>
+        <label><input type="radio" name="q7" value="D"> D) Le MOA</label>
       </div>
-    </div>
-
-    <div class="question">
-      <h3>8. Que propose PRO BTP ?</h3>
-      <div class="options">
-        <label><input type="radio" name="q8" value="1"> Mutuelle, prévoyance et services financiers adaptés au BTP.</label>
-        <label><input type="radio" name="q8" value="0"> Outils de planification de projet.</label>
-        <label><input type="radio" name="q8" value="0"> Normes de sécurité du chantier.</label>
-        <label><input type="radio" name="q8" value="0"> Recrutement de personnel.</label>
+      <!-- Question 8 -->
+      <div class="question" data-correct="A">
+        <h3>8. Qui s’occupe des murs et fondations en béton ou briques ?</h3>
+        <label><input type="radio" name="q8" value="A"> A) Le maçon</label>
+        <label><input type="radio" name="q8" value="B"> B) L’électricien</label>
+        <label><input type="radio" name="q8" value="C"> C) Le MOE</label>
+        <label><input type="radio" name="q8" value="D"> D) Le géomètre</label>
       </div>
-    </div>
-
-    <button type="button" onclick="corrigerQuiz()">Valider mes réponses</button>
-    <div class="result" id="result"></div>
-  </form>
+      <!-- Question 9 -->
+      <div class="question" data-correct="B">
+        <h3>9. Que permet un appel d’offres ?</h3>
+        <label><input type="radio" name="q9" value="A"> A) Réaliser les plans</label>
+        <label><input type="radio" name="q9" value="B"> B) Choisir les entreprises pour le chantier</label>
+        <label><input type="radio" name="q9" value="C"> C) Obtenir un permis de construire</label>
+        <label><input type="radio" name="q9" value="D"> D) Acheter le terrain</label>
+      </div>
+      <!-- Question 10 -->
+      <div class="question" data-correct="C">
+        <h3>10. Qui mesure le terrain et fait les relevés ?</h3>
+        <label><input type="radio" name="q10" value="A"> A) Le géotechnicien</label>
+        <label><input type="radio" name="q10" value="B"> B) Le plombier</label>
+        <label><input type="radio" name="q10" value="C"> C) Le géomètre</label>
+        <label><input type="radio" name="q10" value="D"> D) L’architecte</label>
+      </div>
+      <button type="button" onclick="checkQuiz()">Vérifier</button>
+    </form>
+    <div class="result-container" id="result"></div>
+    <div class="correction" id="correction"></div>
+  </div>
 
   <script>
-    function corrigerQuiz() {
-      const form = document.forms['quizForm'];
+    function checkQuiz() {
+      const form = document.getElementById('quizForm');
+      const questions = form.querySelectorAll('.question');
       let score = 0;
-      const total = 8;
-      const reponses = [1,1,1,1,1,1,1,1];
+      let feedbackHTML = '';
 
-      for(let i=1; i<=total; i++) {
-        const q = form[`q${i}`];
-        for (const option of q) {
-          option.disabled = true;
-          if (option.checked && option.value == "1") {
-            score++;
-          }
+      questions.forEach((q, idx) => {
+        const qIndex = idx + 1;
+        const selected = form['q' + qIndex].value;
+        const correct = q.getAttribute('data-correct');
+
+        if (selected === correct) {
+          score++;
+          feedbackHTML += '<p class="correct">Question ' + qIndex + ' : Bien (réponse '+ correct +')</p>';
+        } else {
+          feedbackHTML += '<p class="incorrect">Question ' + qIndex + ' : Faux (bien = ' + correct + ')</p>';
         }
-      }
 
-      const result = document.getElementById('result');
-      result.innerHTML = `<strong>Votre score : ${score}/${total}</strong><br><div class='correction'>Les bonnes réponses étaient :<br>` +
-        `1. Réalisation des ouvrages<br>` +
-        `2. Clients commanditaires<br>` +
-        `3. Conception et contrôle des travaux<br>` +
-        `4. Prévention et sécurité<br>` +
-        `5. Médecine du travail<br>` +
-        `6. Prévention des accidents<br>` +
-        `7. Défense et accompagnement<br>` +
-        `8. Services sociaux et financiers adaptés</div>`;
+        // Disable inputs
+        q.querySelectorAll('input').forEach(input => input.disabled = true);
+      });
+
+      document.getElementById('result').innerText = 'Votre score : ' + score + ' / ' + questions.length;
+      document.getElementById('correction').innerHTML = feedbackHTML;
     }
   </script>
 </body>
